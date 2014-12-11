@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+override_dh_auto_build:
+	mv deps .deps
+	dh_auto_build -a
+
+override_dh_auto_test:
+	build/bin/nvim --version
+
+%:
+	dh $@
