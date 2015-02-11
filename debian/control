@@ -13,5 +13,5 @@ Vcs-Browser: http://github.com/neovim/neovim
 Package: neovim
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Provides: nvim, editor
+Provides: vim, editor
 Description: Neovim: vim out of the box
