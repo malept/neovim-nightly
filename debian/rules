@@ -7,5 +7,15 @@ override_dh_auto_build:
 override_dh_auto_test:
 	build/bin/nvim --version
 
+# Depend on libtool-bin starting with Vivid (15.04).
+ifeq ($(shell lsb_release -rs | tr -d . | xargs test 1504 -le && echo yes),yes)
+	SUBSTVARS = -Vdist:BuildDepends="libtool-bin"
+else
+	SUBSTVARS = -Vdist:BuildDepends="libtool"
+endif
+
+override_dh_gencontrol:
+	dh_gencontrol -- $(SUBSTVARS)
+
 %:
 	dh $@
