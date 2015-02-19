@@ -3,9 +3,10 @@ Section: editors
 Priority: optional
 Standards-Version: 3.9.3
 Maintainer: Florian Walch <florian+launchpad@fwalch.com>
-Build-Depends: ${dist:BuildDepends}, autoconf, automake, cmake,
+Build-Depends: autoconf, automake, cmake,
   g++ (>= 4:4.6), pkg-config, debhelper (>= 9), libluajit-5.1-dev,
-  lua5.1, liblua5.1-lpeg2, lua-messagepack, liblua5.1-bitop-dev
+  lua5.1, liblua5.1-lpeg2, lua-messagepack, liblua5.1-bitop-dev,
+  libtool | libtool-bin
 Homepage: http://neovim.org/
 Vcs-Git: git://github.com/neovim/neovim.git
 Vcs-Browser: http://github.com/neovim/neovim
