@@ -1,11 +1,14 @@
 #!/usr/bin/make -f
 
 override_dh_auto_build:
-	mv deps .deps
+	mkdir -p .deps/build
+	mv deps-src .deps/build/src
+	sh -c "cd .deps/build/src/jemalloc && ./autogen.sh"
 	dh_auto_build -a
 
 override_dh_auto_test:
 	build/bin/nvim --version
+	build/bin/nvim -u NONE -c ':quit'
 
 %:
 	dh $@
