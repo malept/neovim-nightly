@@ -8,7 +8,7 @@ override_dh_auto_build:
 
 override_dh_auto_test:
 	build/bin/nvim --version
-	build/bin/nvim -u NONE -c ':quit'
+	build/bin/nvim --headless -u NONE -i NONE -c ':quit'
 
 %:
 	dh $@
