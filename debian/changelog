@@ -1,3 +1,9 @@
+neovim (0.1.0ubuntu1) precise; urgency=low
+
+  * Update version number for 0.1 release.
+
+ --  <florian+launchpad@fwalch.com>  Sun, 08 Nov 2015 19:34:42 +0000
+
 neovim (0.0.0) precise; urgency=low
 
   * Initial unstable package release.
