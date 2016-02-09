@@ -1,3 +1,9 @@
+neovim (0.1.2ubuntu1) precise; urgency=medium
+
+  * New upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Tue, 09 Feb 2016 09:55:15 +0000
+
 neovim (0.1.1ubuntu1) precise; urgency=medium
 
   * New upstream release.
