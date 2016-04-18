@@ -5,7 +5,7 @@ Standards-Version: 3.9.5
 Maintainer: Florian Walch <florian+launchpad@fwalch.com>
 Build-Depends: libtool, autoconf, automake, cmake, g++ (>= 4:4.6),
   pkg-config (>> 0.26-1ubuntu1), debhelper (>= 9), libluajit-5.1-dev,
-  lua5.1, lua-lpeg | liblua5.1-lpeg2, lua-messagepack,
+  lua5.1, lua-lpeg | liblua5.1-lpeg2, lua-mpack,
   lua-bitop-dev | liblua5.1-bitop-dev,
   libtool-bin (>= 2.4.2-1.10) | libtool (<< 2.4.2-1.10)
 Homepage: http://neovim.io
