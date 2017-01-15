@@ -1,3 +1,9 @@
+neovim (0.1.7ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Tue, 10 Jan 2017 19:07:15 +0000
+
 neovim (0.1.5ubuntu1) precise; urgency=low
 
   * Update version number for current upstream release.
