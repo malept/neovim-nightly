@@ -4,9 +4,8 @@ Priority: optional
 Standards-Version: 3.9.5
 Maintainer: Florian Walch <florian+launchpad@fwalch.com>
 Build-Depends: libtool, autoconf, automake, cmake, g++ (>= 4:4.6),
-  pkg-config (>> 0.26-1ubuntu1), debhelper (>= 9),
-  lua5.1, lua-lpeg | liblua5.1-lpeg2, lua-mpack,
-  lua-bitop-dev | liblua5.1-bitop-dev, gperf,
+  pkg-config (>> 0.26-1ubuntu1), debhelper (>= 9), luajit,
+  libluajit-5.1-dev, lua-lpeg | liblua5.1-lpeg2, lua-mpack, gperf,
   libtool-bin (>= 2.4.2-1.10) | libtool (<< 2.4.2-1.10)
 Homepage: http://neovim.io
 Vcs-Git: git://github.com/neovim/neovim.git
@@ -14,6 +13,6 @@ Vcs-Browser: https://github.com/neovim/neovim
 
 Package: neovim
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libluajit-5.1-2, ${shlibs:Depends}, ${misc:Depends}
 Provides: vim, editor
 Description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
