@@ -1,3 +1,9 @@
+neovim (0.3.1+ubuntu2) disco; urgency=medium
+
+  * Fix version string so it sorts newer than the stable release.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 19 Nov 2018 09:33:10 -0500
+
 neovim (0.3.1~ubuntu1) disco; urgency=medium
 
   * Update version number for current upstream release.
