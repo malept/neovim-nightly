@@ -1,3 +1,10 @@
+neovim (0.4.0+ubuntu1) disco; urgency=medium
+
+  * debian/rules: Remove jemalloc-specific code, since jemalloc isn't used
+    anymore
+
+ -- James McCoy <jamessan@debian.org>  Sun, 20 Jan 2019 15:30:05 -0500
+
 neovim (0.3.1+ubuntu2) disco; urgency=medium
 
   * Fix version string so it sorts newer than the stable release.

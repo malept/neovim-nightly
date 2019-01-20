@@ -3,7 +3,6 @@
 override_dh_auto_build:
 	mkdir -p .deps/build
 	mv deps-src .deps/build/src
-	sh -c "cd .deps/build/src/jemalloc && ./autogen.sh"
 	dh_auto_build -a
 
 override_dh_auto_test:
