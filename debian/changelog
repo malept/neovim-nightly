@@ -1,3 +1,9 @@
+neovim (0.4.0+ubuntu4) disco; urgency=medium
+
+  * Switch back to using Lua instead of LuaJIT, fixing ARM64 build
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Sun, 21 Jul 2019 19:32:30 +0200
+
 neovim (0.4.0+ubuntu3) disco; urgency=medium
 
   * debian/control: Change Lua dependencies to LuaJIT
