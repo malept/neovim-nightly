@@ -1,3 +1,9 @@
+neovim (0.5.0+ubuntu1) disco; urgency=medium
+
+  * Update version number for current master branch version.
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Tue, 01 Oct 2019 12:41:23 +0200
+
 neovim (0.4.0+ubuntu4) disco; urgency=medium
 
   * Switch back to using Lua instead of LuaJIT, fixing ARM64 build
