@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get install --yes --no-install-recommends devscripts
-          sudo mk-build-deps --install
+          sudo mk-build-deps --install debian/control
       - name: Build Package
         run: |
           dpkg-buildpackage -uc -us -b
