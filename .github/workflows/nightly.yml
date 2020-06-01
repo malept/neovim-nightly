@@ -16,7 +16,9 @@ jobs:
       - name: Merge repositories
         run: cd neovim && cp -R ../neovim-debian/* .
       - name: Install Dependencies
-        run: sudo apt build-dep .
+        run: |
+          sudo apt-get install --yes --no-install-recommends devscripts
+          sudo mk-build-deps --install
       - name: Build Package
         run: |
           dpkg-buildpackage -uc -us -b
