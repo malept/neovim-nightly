@@ -19,7 +19,8 @@ jobs:
         run: |
           sudo apt-get install --yes --no-install-recommends devscripts equivs
           pwd
-          sudo mk-build-deps --install ./debian/control
+          ls debian/control
+          sudo mk-build-deps --install --remove --tool "apt-get --no-install-recommends --yes" ./debian/control
       - name: Build Package
         run: |
           dpkg-buildpackage -uc -us -b
