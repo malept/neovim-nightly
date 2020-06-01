@@ -33,6 +33,7 @@ jobs:
       - name: Build Package
         run: |
           cd neovim
+          dch --newversion="$(head -n 1 debian/changelog | awk '{print $2}' | sed -e 's:[()]::g')+git$(date +%Y%m%d%H%M)" "Auto release"
           dpkg-buildpackage -uc -us -b
           mkdir packages
           mv ../*.deb packages/
