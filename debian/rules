@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
 
-override_dh_auto_build:
-	mkdir -p .deps/build
-	mv deps-src .deps/build/src
-	dh_auto_build -a
+# override_dh_auto_build:
+# 	mkdir -p .deps/build
+# 	mv deps-src .deps/build/src
+# 	dh_auto_build -a
 
 override_dh_auto_test:
 	build/bin/nvim --version
