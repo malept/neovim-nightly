@@ -1,0 +1,27 @@
+name: Nightly Debian Package
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: neovim-debian
+      - uses: actions/checkout@v2
+        with:
+          repository: neovim/neovim
+          path: neovim
+      - name: Merge repositories
+        run: cd neovim && cp -R ../neovim-debian/* .
+      - name: Install Dependencies
+        run: sudo apt build-dep .
+      - name: Build Package
+        run: |
+          dpkg-buildpackage -uc -us -b
+          mkdir packages
+          mv ../*.deb packages/
+      - name: Upload Debian Packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: Debian Packages
+          path: packages/*.deb
