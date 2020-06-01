@@ -4,10 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Debian repository
+        uses: actions/checkout@v2
         with:
           path: neovim-debian
-      - uses: actions/checkout@v2
+      - name: Checkout Neovim repository
+        uses: actions/checkout@v2
         with:
           repository: neovim/neovim
           path: neovim
