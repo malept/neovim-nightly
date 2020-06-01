@@ -20,6 +20,7 @@ jobs:
           sudo apt-get install --yes --no-install-recommends devscripts equivs
           pwd
           ls
+          echo 'parent dir'
           ls ..
           sudo mk-build-deps --install --remove --tool "apt-get --no-install-recommends --yes" ./debian/control
       - name: Build Package
