@@ -13,13 +13,23 @@ jobs:
         with:
           repository: neovim/neovim
           path: neovim
+      - name: Checkout Neovim repository
+        uses: actions/checkout@v2
+        with:
+          repository: neovim/deps
+          path: deps
       - name: Merge repositories
-        run: cd neovim && cp -R ../neovim-debian/* .
+        run: |
+          cd neovim
+          cp -R ../neovim-debian/* .
+          mv ../deps/src deps-src
       - name: Install Dependencies
         run: |
           sudo apt-get install --yes --no-install-recommends devscripts equivs
           cd neovim
           sudo mk-build-deps --install --remove --tool "apt-get --no-install-recommends --yes" ./debian/control
+        env:
+          DEBIAN_FRONTEND: noninteractive
       - name: Build Package
         run: |
           cd neovim
@@ -30,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Debian Packages
-          path: packages/*.deb
+          path: neovim/packages/*.deb
