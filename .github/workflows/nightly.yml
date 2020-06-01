@@ -18,13 +18,11 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get install --yes --no-install-recommends devscripts equivs
-          pwd
-          ls
-          echo 'parent dir'
-          ls ..
+          cd neovim
           sudo mk-build-deps --install --remove --tool "apt-get --no-install-recommends --yes" ./debian/control
       - name: Build Package
         run: |
+          cd neovim
           dpkg-buildpackage -uc -us -b
           mkdir packages
           mv ../*.deb packages/
