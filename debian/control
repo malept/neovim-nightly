@@ -11,10 +11,8 @@ Homepage: http://neovim.io
 Vcs-Git: git://github.com/neovim/neovim.git
 Vcs-Browser: https://github.com/neovim/neovim
 
-Package: neovim
+Package: neovim-nightly
 Architecture: any
 Depends: liblua5.1-0, ${shlibs:Depends}, ${misc:Depends}
 Provides: vim, editor
-Breaks: neovim-runtime
-Replaces: neovim-runtime
 Description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
