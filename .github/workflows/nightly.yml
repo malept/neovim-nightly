@@ -1,5 +1,8 @@
 name: Nightly Debian Package
-on: push
+on:
+  schedule:
+    - cron: '30 4 * * *'
+  push:
 jobs:
   build:
     runs-on: ubuntu-latest
