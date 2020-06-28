@@ -1,7 +1,5 @@
-name: Nightly Debian Package
-on:
-  schedule:
-    - cron: '30 4 * * *'
+name: CI
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,10 +35,3 @@ jobs:
           cd neovim
           dch --newversion="$(head -n 1 debian/changelog | awk '{print $2}' | sed -e 's:[()]::g')+git$(date +%Y%m%d%H%M)" "Auto release"
           dpkg-buildpackage -uc -us -b
-          mkdir packages
-          mv ../*.deb packages/
-      - name: Upload Debian Packages
-        uses: actions/upload-artifact@v2
-        with:
-          name: Debian Packages
-          path: neovim/packages/*.deb
