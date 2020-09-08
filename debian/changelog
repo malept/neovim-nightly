@@ -1,3 +1,9 @@
+neovim (0.5.0+ubuntu2) focal; urgency=medium
+
+  * Use Luajit on supported architectures
+
+ -- James McCoy <jamessan@debian.org>  Mon, 07 Sep 2020 23:09:54 -0400
+
 neovim (0.5.0+ubuntu1) disco; urgency=medium
 
   * Update version number for current master branch version.
