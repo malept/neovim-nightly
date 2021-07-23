@@ -28,6 +28,7 @@ jobs:
           mv ../deps/src deps-src
       - name: Install Dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install --yes --no-install-recommends devscripts equivs
           cd neovim
           sudo mk-build-deps --install --remove --tool "apt-get --no-install-recommends --yes" ./debian/control
