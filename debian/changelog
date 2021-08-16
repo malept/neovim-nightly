@@ -1,3 +1,9 @@
+neovim (0.6.0~ubuntu1) impish; urgency=medium
+
+  * Bump version to 0.6.0
+
+ -- James McCoy <jamessan@debian.org>  Mon, 16 Aug 2021 07:33:20 -0400
+
 neovim (0.5.0+ubuntu2) focal; urgency=medium
 
   * Use Luajit on supported architectures
