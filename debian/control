@@ -30,8 +30,4 @@ Depends:
 Provides:
  editor,
  vim,
-Breaks:
- neovim-runtime,
-Replaces:
- neovim-runtime,
 Description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
