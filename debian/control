@@ -9,6 +9,7 @@ Build-Depends:
  cmake,
  debhelper (>= 11),
  g++,
+ git,
  liblua5.1-0-dev [arm64] | libluajit-5.1-dev,
  libtool-bin,
  lua-bitop-dev [arm64] | liblua5.1-bitop-dev [arm64],

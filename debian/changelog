@@ -1,3 +1,9 @@
+neovim (0.8.0~ubuntu1-3) kinetic; urgency=medium
+
+  * Add "Build-Depends: git" to apply patches in bundled deps.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 15 Aug 2022 19:35:55 -0400
+
 neovim (0.8.0~ubuntu1-2) kinetic; urgency=medium
 
   * Actually install the files to each package
