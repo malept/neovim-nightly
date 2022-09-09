@@ -7,27 +7,39 @@ Build-Depends:
  autoconf,
  automake,
  cmake,
- debhelper (>= 9),
- g++ (>= 4:4.6),
- gperf,
+ debhelper (>= 11),
+ g++,
+ git,
  liblua5.1-0-dev [arm64] | libluajit-5.1-dev,
- libtool,
- libtool-bin (>= 2.4.2-1.10) | libtool (<< 2.4.2-1.10),
+ libtool-bin,
  lua-bitop-dev [arm64] | liblua5.1-bitop-dev [arm64],
  lua-lpeg | liblua5.1-lpeg2,
  lua-mpack,
  lua5.1 [arm64] | luajit,
  pkg-config (>> 0.26-1ubuntu1),
-Homepage: http://neovim.io
-Vcs-Git: git://github.com/neovim/neovim.git
+Homepage: https://neovim.io
+Vcs-Git: https://github.com/neovim/neovim.git
 Vcs-Browser: https://github.com/neovim/neovim
 
 Package: neovim-nightly
 Architecture: any
 Depends:
+ neovim-runtime (= ${source:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Provides:
  editor,
  vim,
+Breaks:
+ neovim-runtime (<< 0.8.0~~)
+Replaces:
+ neovim-runtime (<< 0.8.0~~)
 Description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
+ This package is the nightly build from the neovim unstable PPA.
+
+Package: neovim-runtime
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Fork of Vim aiming to improve user experience, plugins, and GUIs. (runtime files)
+ This package is the nightly build from the neovim unstable PPA.
