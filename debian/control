@@ -24,20 +24,20 @@ Vcs-Browser: https://github.com/neovim/neovim
 Package: neovim-nightly
 Architecture: any
 Depends:
- neovim-runtime (= ${source:Version}),
+ neovim-runtime-nightly (= ${source:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Provides:
  editor,
  vim,
 Breaks:
- neovim-runtime (<< 0.8.0~~)
+ neovim-runtime-nightly (<< 0.8.0~~)
 Replaces:
- neovim-runtime (<< 0.8.0~~)
+ neovim-runtime-nightly (<< 0.8.0~~)
 Description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
  This package is the nightly build from the neovim unstable PPA.
 
-Package: neovim-runtime
+Package: neovim-runtime-nightly
 Architecture: all
 Depends: ${misc:Depends}
 Multi-Arch: foreign
