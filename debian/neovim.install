@@ -1,2 +1,2 @@
-usr/bin/nvim
-usr/lib/*/nvim/parser/*.so
+opt/neovim-nightly/bin/nvim
+opt/neovim-nightly/lib/*/nvim/parser/*.so
